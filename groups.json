@@ -1,0 +1,306 @@
+[
+    {
+        "description": "CA-Persona-AzureServiceAccounts",
+        "displayName": "CA-Persona-AzureServiceAccounts",
+        "mailEnabled": false,
+        "mailNickname": "CA-Persona-AzureServiceAccounts",
+        "securityEnabled": true,
+        "securityIdentifier": "S-1-12-1-2598675583-1296418272-578898073-602059945"
+    },
+    {
+        "displayName": "CA-Persona-GuestAdmins",
+        "mailEnabled": false,
+        "mailNickname": "CA-Persona-GuestAdmins",
+        "securityEnabled": true,
+        "securityIdentifier": "S-1-12-1-2631466224-1100451410-1783495556-2385274238"
+    },
+    {
+        "description": "CA-Persona-Guests",
+        "displayName": "CA-Persona-Guests",
+        "mailEnabled": false,
+        "mailNickname": "CA-Persona-Guests",
+        "securityEnabled": true,
+        "securityIdentifier": "S-1-12-1-3597011336-1155035067-559560330-992612815",
+        "visibility": "Public"
+    },
+    {
+        "description": "CA-Persona-CorpServiceAccounts",
+        "displayName": "CA-Persona-CorpServiceAccounts",
+        "mailEnabled": false,
+        "mailNickname": "CA-Persona-CorpServiceAccounts",
+        "securityEnabled": true,
+        "securityIdentifier": "S-1-12-1-3524363394-1292945955-1117756859-3766598398"
+    },
+    {
+        "description": "CA-Persona-Externals",
+        "displayName": "CA-Persona-Externals",
+        "mailEnabled": false,
+        "mailNickname": "CA-Persona-Externals",
+        "securityEnabled": true,
+        "securityIdentifier": "S-1-12-1-1357901971-1096231364-3126660995-4161921897"
+    },
+    {
+        "description": "CA-Persona-Admins",
+        "displayName": "CA-Persona-Admins",
+        "mailEnabled": false,
+        "mailNickname": "CA-Persona-Admins",
+        "securityEnabled": true,
+        "securityIdentifier": "S-1-12-1-1049646023-1172997496-4086270140-766752067"
+    },
+    {
+        "description": "CA-BreakGlassAccounts",
+        "displayName": "CA-BreakGlassAccounts",
+        "mailEnabled": false,
+        "mailNickname": "CA-BreakGlassAccounts",
+        "securityEnabled": true,
+        "securityIdentifier": "S-1-12-1-681403132-1120189780-2429417363-4012795383"
+    },
+    {
+        "description": "CA-Persona-Global-BaseProtection-Exclusions",
+        "displayName": "CA-Persona-Global-BaseProtection-Exclusions",
+        "mailEnabled": false,
+        "mailNickname": "CA-Persona-Global-BaseProtection-Exclusions",
+        "securityEnabled": true,
+        "securityIdentifier": "S-1-12-1-1894343363-1129928275-377710773-4023535530"
+    },
+    {
+        "description": "CA-Persona-Microsoft365ServiceAccounts",
+        "displayName": "CA-Persona-Microsoft365ServiceAccounts",
+        "mailEnabled": false,
+        "mailNickname": "CA-Persona-Microsoft365ServiceAccounts",
+        "securityEnabled": true,
+        "securityIdentifier": "S-1-12-1-3226127295-1337676773-128328127-2738306341"
+    },
+    {
+        "description": "CA-Persona-Internals",
+        "displayName": "CA-Persona-Internals",
+        "mailEnabled": false,
+        "mailNickname": "CA-Persona-Internals",
+        "securityEnabled": true,
+        "securityIdentifier": "S-1-12-1-1206829466-1311173670-950346905-2638136274"
+    },
+    {
+        "description": "CA-Persona-Admins-BaseProtection-Exclusions",
+        "displayName": "CA-Persona-Admins-BaseProtection-Exclusions",
+        "mailEnabled": false,
+        "mailNickname": "CA-Persona-Admins-BaseProtection-Exclusions",
+        "securityEnabled": true,
+        "securityIdentifier": "S-1-12-1-3077250442-1247629496-1020065923-350871897"
+    },
+    {
+        "description": "CA-Persona-Admins-IdentityProtection-Exclusions",
+        "displayName": "CA-Persona-Admins-IdentityProtection-Exclusions",
+        "mailEnabled": false,
+        "mailNickname": "CA-Persona-Admins-IdentityProtection-Exclusions",
+        "securityEnabled": true,
+        "securityIdentifier": "S-1-12-1-2050814917-1293850728-4243340706-153218714"
+    },
+    {
+        "description": "CA-Persona-Developers",
+        "displayName": "CA-Persona-Developers",
+        "mailEnabled": false,
+        "mailNickname": "CA-Persona-Developers",
+        "securityEnabled": true,
+        "securityIdentifier": "S-1-12-1-3550882265-1342095433-3697754289-2631548363"
+    },
+    {
+        "description": "CA-Persona-Admins-AppProtection-Exclusions",
+        "displayName": "CA-Persona-Admins-AppProtection-Exclusions",
+        "mailEnabled": false,
+        "mailNickname": "CA-Persona-Admins-AppProtection-Exclusions",
+        "securityEnabled": true,
+        "securityIdentifier": "S-1-12-1-1322115632-1269965782-1740114106-2497892489"
+    },
+    {
+        "description": "CA-Persona-Admins-DataProtection-Exclusions",
+        "displayName": "CA-Persona-Admins-DataProtection-Exclusions",
+        "mailEnabled": false,
+        "mailNickname": "CA-Persona-Admins-DataProtection-Exclusions",
+        "securityEnabled": true,
+        "securityIdentifier": "S-1-12-1-2250731974-1090997884-2620515991-1219135047"
+    },
+    {
+        "description": "CA-Persona-Admins-AttackSurfaceReduction-Exclusions",
+        "displayName": "CA-Persona-Admins-AttackSurfaceReduction-Exclusions",
+        "mailEnabled": false,
+        "mailNickname": "CA-Persona-Admins-AttackSurfaceReduction-Exclusions",
+        "securityEnabled": true,
+        "securityIdentifier": "S-1-12-1-379334335-1155362344-3791978400-3929620036"
+    },
+    {
+        "description": "CA-Persona-Internals-BaseProtection-Exclusions",
+        "displayName": "CA-Persona-Internals-BaseProtection-Exclusions",
+        "mailEnabled": false,
+        "mailNickname": "CA-Persona-Internals-BaseProtection-Exclusions",
+        "securityEnabled": true,
+        "securityIdentifier": "S-1-12-1-3077809863-1169971903-307752068-4145221867"
+    },
+    {
+        "description": "CA-Persona-Internals-IdentityProtection-Exclusions",
+        "displayName": "CA-Persona-Internals-IdentityProtection-Exclusions",
+        "mailEnabled": false,
+        "mailNickname": "CA-Persona-Internals-IdentityProtection-Exclusions",
+        "securityEnabled": true,
+        "securityIdentifier": "S-1-12-1-4220485582-1135107551-3602787458-1453163767"
+    },
+    {
+        "description": "CA-Persona-Internals-AppProtection-Exclusions",
+        "displayName": "CA-Persona-Internals-AppProtection-Exclusions",
+        "mailEnabled": false,
+        "mailNickname": "CA-Persona-Internals-AppProtection-Exclusions",
+        "securityEnabled": true,
+        "securityIdentifier": "S-1-12-1-600797012-1259694727-3749748364-618461693"
+    },
+    {
+        "description": "CA-Persona-Internals-DataProtection-Exclusions",
+        "displayName": "CA-Persona-Internals-DataProtection-Exclusions",
+        "mailEnabled": false,
+        "mailNickname": "CA-Persona-Internals-DataProtection-Exclusions",
+        "securityEnabled": true,
+        "securityIdentifier": "S-1-12-1-434158750-1335924323-3070207675-2909905448"
+    },
+    {
+        "description": "CA-Persona-Externals-BaseProtection-Exclusions",
+        "displayName": "CA-Persona-Externals-BaseProtection-Exclusions",
+        "mailEnabled": false,
+        "mailNickname": "CA-Persona-Externals-BaseProtection-Exclusions",
+        "securityEnabled": true,
+        "securityIdentifier": "S-1-12-1-3605161777-1310566987-3781493173-3062733289"
+    },
+    {
+        "description": "CA-Persona-Externals-IdentityProtection-Exclusions",
+        "displayName": "CA-Persona-Externals-IdentityProtection-Exclusions",
+        "mailEnabled": false,
+        "mailNickname": "CA-Persona-Externals-IdentityProtection-Exclusions",
+        "securityEnabled": true,
+        "securityIdentifier": "S-1-12-1-1687278071-1212453261-3110868146-3676305625"
+    },
+    {
+        "description": "CA-Persona-Externals-AppProtection-Exclusions",
+        "displayName": "CA-Persona-Externals-AppProtection-Exclusions",
+        "mailEnabled": false,
+        "mailNickname": "CA-Persona-Externals-AppProtection-Exclusions",
+        "securityEnabled": true,
+        "securityIdentifier": "S-1-12-1-2565702072-1181604936-4270373266-2435766885"
+    },
+    {
+        "description": "CA-Persona-Externals-DataProtection-Exclusions",
+        "displayName": "CA-Persona-Externals-DataProtection-Exclusions",
+        "mailEnabled": false,
+        "mailNickname": "CA-Persona-Externals-DataProtection-Exclusions",
+        "securityEnabled": true,
+        "securityIdentifier": "S-1-12-1-3140360359-1178043202-677897353-1742327129"
+    },
+    {
+        "description": "CA-Persona-Externals-AttackSurfaceReduction-Exclusions",
+        "displayName": "CA-Persona-Externals-AttackSurfaceReduction-Exclusions",
+        "mailEnabled": false,
+        "mailNickname": "CA-Persona-Externals-AttackSurfaceReduction-Exclusions",
+        "securityEnabled": true,
+        "securityIdentifier": "S-1-12-1-702680388-1323880698-1443275960-3692703353"
+    },
+    {
+        "description": "CA-Persona-Guests-IdentityProtection-Exclusions",
+        "displayName": "CA-Persona-Guests-IdentityProtection-Exclusions",
+        "mailEnabled": false,
+        "mailNickname": "CA-Persona-Guests-IdentityProtection-Exclusions",
+        "securityEnabled": true,
+        "securityIdentifier": "S-1-12-1-3450994546-1306135096-2091793590-3259505358"
+    },
+    {
+        "description": "CA-Persona-Guests-AttackSurfaceReduction-Exclusions",
+        "displayName": "CA-Persona-Guests-AttackSurfaceReduction-Exclusions",
+        "mailEnabled": false,
+        "mailNickname": "CA-Persona-Guests-AttackSurfaceReduction-Exclusions",
+        "securityEnabled": true,
+        "securityIdentifier": "S-1-12-1-1209241244-1335014217-3486199684-868321947"
+    },
+    {
+        "description": "CA-Persona-GuestAdmins-IdentityProtection-Exclusions",
+        "displayName": "CA-Persona-GuestAdmins-IdentityProtection-Exclusions",
+        "mailEnabled": false,
+        "mailNickname": "CA-Persona-GuestAdmins-IdentityProtection-Exclusions",
+        "securityEnabled": true,
+        "securityIdentifier": "S-1-12-1-2886468767-1216004478-4185059207-122681893"
+    },
+    {
+        "description": "CA-Persona-AzureServiceAccounts-Exclusions",
+        "displayName": "CA-Persona-AzureServiceAccounts-Exclusions",
+        "mailEnabled": false,
+        "mailNickname": "ce3032b0-0",
+        "securityEnabled": true,
+        "securityIdentifier": "S-1-12-1-4097278460-1231894704-1682726334-3473446821"
+    },
+    {
+        "description": "CA-Persona-CorpServiceAccounts-Exclusions",
+        "displayName": "CA-Persona-CorpServiceAccounts-Exclusions",
+        "mailEnabled": false,
+        "mailNickname": "0f49e42b-b",
+        "securityEnabled": true,
+        "securityIdentifier": "S-1-12-1-2300846812-1325394086-1591849608-3153739241"
+    },
+    {
+        "description": "CA-Persona-Guests-Compliance-Exclusions",
+        "displayName": "CA-Persona-Guests-Compliance-Exclusions",
+        "mailEnabled": false,
+        "mailNickname": "CA-Persona-Guests-Compliance-Exclusions",
+        "securityEnabled": true,
+        "securityIdentifier": "S-1-12-1-2290429622-1194691684-43956115-183822597"
+    },
+    {
+        "description": "CA-Persona-WorkloadIdendtities-Exclusions",
+        "displayName": "CA-Persona-WorkloadIdentities-Exclusions",
+        "mailEnabled": false,
+        "mailNickname": "b0d3e2f2-0",
+        "securityEnabled": true,
+        "securityIdentifier": "S-1-12-1-1693197674-1339351699-1380951177-2170147279"
+    },
+    {
+        "description": "CA-Persona-WorkloadIdentities",
+        "displayName": "CA-Persona-WorkloadIdentities",
+        "mailEnabled": false,
+        "mailNickname": "a5b3e62b-0",
+        "securityEnabled": true,
+        "securityIdentifier": "S-1-12-1-2591141252-1227546799-3570711703-693018910"
+    },
+    {
+        "description": "CA-Persona-Developers-BaseProtection-Exclusions",
+        "displayName": "CA-Persona-Developers-BaseProtection-Exclusions",
+        "mailEnabled": false,
+        "mailNickname": "CA-Persona-Developers-BaseProtection-Exclusions",
+        "securityEnabled": true,
+        "securityIdentifier": "S-1-12-1-98169702-1177518115-2748425372-3992476637"
+    },
+    {
+        "description": "CA-Persona-Developers-IdentityProtection-Exclusions",
+        "displayName": "CA-Persona-Developers-IdentityProtection-Exclusions",
+        "mailEnabled": false,
+        "mailNickname": "CA-Persona-Developers-IdentityProtection-Exclusions",
+        "securityEnabled": true,
+        "securityIdentifier": "S-1-12-1-2399383883-1214606983-4202151102-1497147475"
+    },
+    {
+        "description": "CA-Persona-Developers-AppProtection-Exclusions",
+        "displayName": "CA-Persona-Developers-AppProtection-Exclusions",
+        "mailEnabled": false,
+        "mailNickname": "CA-Persona-Developers-AppProtection-Exclusions",
+        "securityEnabled": true,
+        "securityIdentifier": "S-1-12-1-2665083416-1141614150-3273554569-3233150321"
+    },
+    {
+        "description": "CA-Persona-Developers-DataProtection-Exclusions",
+        "displayName": "CA-Persona-Developers-DataProtection-Exclusions",
+        "mailEnabled": false,
+        "mailNickname": "CA-Persona-Developers-DataProtection-Exclusions",
+        "securityEnabled": true,
+        "securityIdentifier": "S-1-12-1-2010688003-1110102420-2320920510-2015773426"
+    },
+    {
+        "description": "CA-Persona-Developers-AttackSurfaceReduction-Exclusions",
+        "displayName": "CA-Persona-Developers-AttackSurfaceReduction-Exclusions",
+        "mailEnabled": false,
+        "mailNickname": "CA-Persona-Developers-AttackSurfaceReduction-Exclusions",
+        "securityEnabled": true,
+        "securityIdentifier": "S-1-12-1-2306805499-1167097463-3060281225-2679992423"
+    }
+]

@@ -1,0 +1,3157 @@
+[
+    {
+        "displayName": "CA001-Global-BaseProtection-AllApps-AnyPlatform-BlockNonPersonas",
+        "state": "disabled",
+        "sessionControls": null,
+        "conditions": {
+            "userRiskLevels": [],
+            "signInRiskLevels": [],
+            "clientAppTypes": [
+                "all"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "locations": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null,
+                "includeApplicationNames": [
+                    "All"
+                ]
+            },
+            "users": {
+                "includeGuestsOrExternalUsers": null,
+                "excludeGuestsOrExternalUsers": null,
+                "excludeGroupNames": [
+                    "CA-Persona-AzureServiceAccounts",
+                    "CA-Persona-GuestAdmins",
+                    "CA-Persona-Guests",
+                    "CA-Persona-CorpServiceAccounts",
+                    "CA-Persona-Externals",
+                    "CA-Persona-Admins",
+                    "CA-BreakGlassAccounts",
+                    "CA-Persona-Global-BaseProtection-Exclusions",
+                    "CA-Persona-Microsoft365ServiceAccounts",
+                    "CA-Persona-Internals"
+                ],
+                "includeUserNames": [
+                    "All"
+                ]
+            },
+            "platforms": {
+                "includePlatforms": [
+                    "all"
+                ],
+                "excludePlatforms": []
+            }
+        },
+        "grantControls": {
+            "operator": "OR",
+            "builtInControls": [
+                "block"
+            ],
+            "customAuthenticationFactors": [],
+            "termsOfUse": [],
+            "authenticationStrength": null
+        }
+    },
+    {
+        "displayName": "CA002-Global-AttackSurfaceReduction-VariousApps-AnyPlatform-Block",
+        "state": "disabled",
+        "sessionControls": null,
+        "conditions": {
+            "userRiskLevels": [],
+            "signInRiskLevels": [],
+            "clientAppTypes": [
+                "all"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "locations": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null,
+                "includeApplicationNames": [
+                    "None"
+                ]
+            },
+            "users": {
+                "includeGuestsOrExternalUsers": null,
+                "excludeGuestsOrExternalUsers": null,
+                "includeUserNames": [
+                    "All"
+                ]
+            },
+            "platforms": {
+                "includePlatforms": [
+                    "all"
+                ],
+                "excludePlatforms": []
+            }
+        },
+        "grantControls": {
+            "operator": "OR",
+            "builtInControls": [
+                "mfa"
+            ],
+            "customAuthenticationFactors": [],
+            "termsOfUse": [],
+            "authenticationStrength": null
+        }
+    },
+    {
+        "displayName": "CA100-Admins-BaseProtection-AllApps-AnyPlatform-MFAANDCompliant",
+        "state": "disabled",
+        "sessionControls": null,
+        "conditions": {
+            "userRiskLevels": [],
+            "signInRiskLevels": [],
+            "clientAppTypes": [
+                "all"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "locations": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null,
+                "excludeApplicationNames": [
+                    "Microsoft Intune Enrollment"
+                ],
+                "includeApplicationNames": [
+                    "All"
+                ]
+            },
+            "users": {
+                "includeGuestsOrExternalUsers": null,
+                "excludeGuestsOrExternalUsers": null,
+                "excludeGroupNames": [
+                    "CA-BreakGlassAccounts",
+                    "CA-Persona-Admins-BaseProtection-Exclusions",
+                    "CA-Persona-Microsoft365ServiceAccounts",
+                    "CA-Persona-AzureServiceAccounts",
+                    "CA-Persona-CorpServiceAccounts"
+                ],
+                "includeGroupNames": [
+                    "CA-Persona-Admins"
+                ]
+            },
+            "platforms": {
+                "includePlatforms": [
+                    "all"
+                ],
+                "excludePlatforms": []
+            }
+        },
+        "grantControls": {
+            "operator": "AND",
+            "builtInControls": [
+                "mfa",
+                "compliantDevice"
+            ],
+            "customAuthenticationFactors": [],
+            "termsOfUse": [],
+            "authenticationStrength": null
+        }
+    },
+    {
+        "displayName": "CA101-Admins-IdentityProtection-AllApps-AnyPlatform-CombinedRegistration",
+        "state": "disabled",
+        "sessionControls": null,
+        "conditions": {
+            "userRiskLevels": [],
+            "signInRiskLevels": [],
+            "clientAppTypes": [
+                "all"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "locations": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [
+                    "urn:user:registersecurityinfo"
+                ],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null
+            },
+            "users": {
+                "includeGuestsOrExternalUsers": null,
+                "excludeGuestsOrExternalUsers": null,
+                "excludeGroupNames": [
+                    "CA-BreakGlassAccounts",
+                    "CA-Persona-Microsoft365ServiceAccounts",
+                    "CA-Persona-AzureServiceAccounts",
+                    "CA-Persona-CorpServiceAccounts",
+                    "CA-Persona-Admins-IdentityProtection-Exclusions"
+                ],
+                "includeGroupNames": [
+                    "CA-Persona-Admins"
+                ]
+            },
+            "platforms": {
+                "includePlatforms": [
+                    "all"
+                ],
+                "excludePlatforms": []
+            }
+        },
+        "grantControls": {
+            "operator": "OR",
+            "builtInControls": [
+                "compliantDevice",
+                "domainJoinedDevice"
+            ],
+            "customAuthenticationFactors": [],
+            "termsOfUse": [],
+            "authenticationStrength": null
+        }
+    },
+    {
+        "displayName": "CA102-Admins-IdentityProtection-AllApps-AnyPlatform-MFAandPWDforMediumandHighUserRisk",
+        "state": "disabled",
+        "conditions": {
+            "userRiskLevels": [
+                "high",
+                "medium"
+            ],
+            "signInRiskLevels": [],
+            "clientAppTypes": [
+                "all"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "platforms": null,
+            "locations": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null,
+                "includeApplicationNames": [
+                    "All"
+                ]
+            },
+            "users": {
+                "includeGuestsOrExternalUsers": null,
+                "excludeGuestsOrExternalUsers": null,
+                "excludeGroupNames": [
+                    "CA-Persona-Microsoft365ServiceAccounts",
+                    "CA-Persona-AzureServiceAccounts",
+                    "CA-BreakGlassAccounts",
+                    "CA-Persona-Admins-IdentityProtection-Exclusions",
+                    "CA-Persona-CorpServiceAccounts"
+                ],
+                "includeGroupNames": [
+                    "CA-Persona-Admins"
+                ]
+            }
+        },
+        "grantControls": {
+            "operator": "AND",
+            "builtInControls": [
+                "mfa",
+                "passwordChange"
+            ],
+            "customAuthenticationFactors": [],
+            "termsOfUse": [],
+            "authenticationStrength": null
+        },
+        "sessionControls": {
+            "disableResilienceDefaults": null,
+            "applicationEnforcedRestrictions": null,
+            "cloudAppSecurity": null,
+            "persistentBrowser": null,
+            "signInFrequency": {
+                "value": null,
+                "type": null,
+                "authenticationType": "primaryAndSecondaryAuthentication",
+                "frequencyInterval": "everyTime",
+                "isEnabled": true
+            }
+        }
+    },
+    {
+        "displayName": "CA103-Admins-IdentityProtection-AllApps-AnyPlatform-MFAforMediumandHighSignInRisk",
+        "state": "disabled",
+        "conditions": {
+            "userRiskLevels": [],
+            "signInRiskLevels": [
+                "high",
+                "medium"
+            ],
+            "clientAppTypes": [
+                "all"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "platforms": null,
+            "locations": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null,
+                "includeApplicationNames": [
+                    "All"
+                ]
+            },
+            "users": {
+                "includeGuestsOrExternalUsers": null,
+                "excludeGuestsOrExternalUsers": null,
+                "excludeGroupNames": [
+                    "CA-BreakGlassAccounts",
+                    "CA-Persona-Microsoft365ServiceAccounts",
+                    "CA-Persona-AzureServiceAccounts",
+                    "CA-Persona-Admins-IdentityProtection-Exclusions",
+                    "CA-Persona-CorpServiceAccounts"
+                ],
+                "includeGroupNames": [
+                    "CA-Persona-Admins"
+                ]
+            }
+        },
+        "grantControls": {
+            "operator": "OR",
+            "builtInControls": [
+                "mfa"
+            ],
+            "customAuthenticationFactors": [],
+            "termsOfUse": [],
+            "authenticationStrength": null
+        },
+        "sessionControls": {
+            "disableResilienceDefaults": null,
+            "applicationEnforcedRestrictions": null,
+            "cloudAppSecurity": null,
+            "persistentBrowser": null,
+            "signInFrequency": {
+                "value": null,
+                "type": null,
+                "authenticationType": "primaryAndSecondaryAuthentication",
+                "frequencyInterval": "everyTime",
+                "isEnabled": true
+            }
+        }
+    },
+    {
+        "displayName": "CA105-Admins-AppProtection-MicrosoftIntuneEnrollment-AnyPlatform-MFA",
+        "state": "disabled",
+        "conditions": {
+            "userRiskLevels": [],
+            "signInRiskLevels": [],
+            "clientAppTypes": [
+                "all"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "locations": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null,
+                "includeApplicationNames": [
+                    "Microsoft Intune Enrollment"
+                ]
+            },
+            "users": {
+                "includeGuestsOrExternalUsers": null,
+                "excludeGuestsOrExternalUsers": null,
+                "excludeGroupNames": [
+                    "CA-BreakGlassAccounts",
+                    "CA-Persona-Microsoft365ServiceAccounts",
+                    "CA-Persona-AzureServiceAccounts",
+                    "CA-Persona-Admins-AppProtection-Exclusions",
+                    "CA-Persona-CorpServiceAccounts"
+                ],
+                "includeGroupNames": [
+                    "CA-Persona-Admins"
+                ]
+            },
+            "platforms": {
+                "includePlatforms": [
+                    "all"
+                ],
+                "excludePlatforms": []
+            }
+        },
+        "grantControls": {
+            "operator": "OR",
+            "builtInControls": [
+                "mfa"
+            ],
+            "customAuthenticationFactors": [],
+            "termsOfUse": [],
+            "authenticationStrength": null
+        },
+        "sessionControls": {
+            "disableResilienceDefaults": null,
+            "applicationEnforcedRestrictions": null,
+            "cloudAppSecurity": null,
+            "persistentBrowser": null,
+            "signInFrequency": {
+                "value": null,
+                "type": null,
+                "authenticationType": "primaryAndSecondaryAuthentication",
+                "frequencyInterval": "everyTime",
+                "isEnabled": true
+            }
+        }
+    },
+    {
+        "displayName": "CA106-Admins-DataProtection-AllApps-iOSorAndroid-ClientAppandAPP",
+        "state": "disabled",
+        "sessionControls": null,
+        "conditions": {
+            "userRiskLevels": [],
+            "signInRiskLevels": [],
+            "clientAppTypes": [
+                "all"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "locations": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null,
+                "includeApplicationNames": [
+                    "All"
+                ]
+            },
+            "users": {
+                "includeGuestsOrExternalUsers": null,
+                "excludeGuestsOrExternalUsers": null,
+                "excludeGroupNames": [
+                    "CA-BreakGlassAccounts",
+                    "CA-Persona-Admins-DataProtection-Exclusions",
+                    "CA-Persona-Microsoft365ServiceAccounts",
+                    "CA-Persona-AzureServiceAccounts",
+                    "CA-Persona-CorpServiceAccounts"
+                ],
+                "includeGroupNames": [
+                    "CA-Persona-Admins"
+                ]
+            },
+            "platforms": {
+                "includePlatforms": [
+                    "android",
+                    "iOS"
+                ],
+                "excludePlatforms": []
+            }
+        },
+        "grantControls": {
+            "operator": "OR",
+            "builtInControls": [
+                "approvedApplication",
+                "compliantApplication"
+            ],
+            "customAuthenticationFactors": [],
+            "termsOfUse": [],
+            "authenticationStrength": null
+        }
+    },
+    {
+        "displayName": "CA107-Admins-DataProtection-AllApps-AnyPlatform-SessionPolicy",
+        "state": "disabled",
+        "grantControls": null,
+        "conditions": {
+            "userRiskLevels": [],
+            "signInRiskLevels": [],
+            "clientAppTypes": [
+                "all"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "platforms": null,
+            "locations": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null,
+                "includeApplicationNames": [
+                    "All"
+                ]
+            },
+            "users": {
+                "includeGuestsOrExternalUsers": null,
+                "excludeGuestsOrExternalUsers": null,
+                "excludeGroupNames": [
+                    "CA-BreakGlassAccounts",
+                    "CA-Persona-Admins-DataProtection-Exclusions",
+                    "CA-Persona-AzureServiceAccounts",
+                    "CA-Persona-Microsoft365ServiceAccounts",
+                    "CA-Persona-CorpServiceAccounts"
+                ],
+                "includeGroupNames": [
+                    "CA-Persona-Admins"
+                ]
+            }
+        },
+        "sessionControls": {
+            "disableResilienceDefaults": null,
+            "applicationEnforcedRestrictions": null,
+            "cloudAppSecurity": null,
+            "signInFrequency": {
+                "value": 4,
+                "type": "hours",
+                "authenticationType": "primaryAndSecondaryAuthentication",
+                "frequencyInterval": "timeBased",
+                "isEnabled": true
+            },
+            "persistentBrowser": {
+                "mode": "never",
+                "isEnabled": true
+            }
+        }
+    },
+    {
+        "displayName": "CA108-Admins-AttackSurfaceReduction-AllApps-AnyPlatform-BlockUnknownPlatforms",
+        "state": "disabled",
+        "sessionControls": null,
+        "conditions": {
+            "userRiskLevels": [],
+            "signInRiskLevels": [],
+            "clientAppTypes": [
+                "all"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "locations": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null,
+                "includeApplicationNames": [
+                    "All"
+                ]
+            },
+            "users": {
+                "includeGuestsOrExternalUsers": null,
+                "excludeGuestsOrExternalUsers": null,
+                "excludeGroupNames": [
+                    "CA-BreakGlassAccounts",
+                    "CA-Persona-Microsoft365ServiceAccounts",
+                    "CA-Persona-AzureServiceAccounts",
+                    "CA-Persona-Admins-AttackSurfaceReduction-Exclusions",
+                    "CA-Persona-CorpServiceAccounts"
+                ],
+                "includeGroupNames": [
+                    "CA-Persona-Admins"
+                ]
+            },
+            "platforms": {
+                "includePlatforms": [
+                    "all"
+                ],
+                "excludePlatforms": [
+                    "android",
+                    "iOS",
+                    "windows",
+                    "windowsPhone",
+                    "macOS",
+                    "linux"
+                ]
+            }
+        },
+        "grantControls": {
+            "operator": "OR",
+            "builtInControls": [
+                "block"
+            ],
+            "customAuthenticationFactors": [],
+            "termsOfUse": [],
+            "authenticationStrength": null
+        }
+    },
+    {
+        "displayName": "CA200-Internals-BaseProtection-AllApps-AnyPlatform-CompliantorAADHJ",
+        "state": "disabled",
+        "sessionControls": null,
+        "conditions": {
+            "userRiskLevels": [],
+            "signInRiskLevels": [],
+            "clientAppTypes": [
+                "all"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "locations": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null,
+                "excludeApplicationNames": [
+                    "Microsoft Intune Enrollment"
+                ],
+                "includeApplicationNames": [
+                    "All"
+                ]
+            },
+            "users": {
+                "includeGuestsOrExternalUsers": null,
+                "excludeGuestsOrExternalUsers": null,
+                "excludeGroupNames": [
+                    "CA-BreakGlassAccounts",
+                    "CA-Persona-Internals-BaseProtection-Exclusions"
+                ],
+                "includeGroupNames": [
+                    "CA-Persona-Internals"
+                ]
+            },
+            "platforms": {
+                "includePlatforms": [
+                    "all"
+                ],
+                "excludePlatforms": []
+            }
+        },
+        "grantControls": {
+            "operator": "OR",
+            "builtInControls": [
+                "compliantDevice",
+                "domainJoinedDevice"
+            ],
+            "customAuthenticationFactors": [],
+            "termsOfUse": [],
+            "authenticationStrength": null
+        }
+    },
+    {
+        "displayName": "CA201-Internals-IdentityProtection-AllApps-AnyPlatform-CombinedRegistration",
+        "state": "disabled",
+        "sessionControls": null,
+        "conditions": {
+            "userRiskLevels": [],
+            "signInRiskLevels": [],
+            "clientAppTypes": [
+                "all"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "locations": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [
+                    "urn:user:registersecurityinfo"
+                ],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null
+            },
+            "users": {
+                "includeGuestsOrExternalUsers": null,
+                "excludeGuestsOrExternalUsers": null,
+                "excludeGroupNames": [
+                    "CA-BreakGlassAccounts",
+                    "CA-Persona-Internals-IdentityProtection-Exclusions"
+                ],
+                "includeGroupNames": [
+                    "CA-Persona-Internals"
+                ]
+            },
+            "platforms": {
+                "includePlatforms": [
+                    "all"
+                ],
+                "excludePlatforms": []
+            }
+        },
+        "grantControls": {
+            "operator": "OR",
+            "builtInControls": [
+                "compliantDevice",
+                "domainJoinedDevice"
+            ],
+            "customAuthenticationFactors": [],
+            "termsOfUse": [],
+            "authenticationStrength": null
+        }
+    },
+    {
+        "displayName": "CA202-Internals-IdentityProtection-AllApps-AnyPlatform-MFAandPWDforHighUserRisk",
+        "state": "disabled",
+        "conditions": {
+            "userRiskLevels": [
+                "high"
+            ],
+            "signInRiskLevels": [],
+            "clientAppTypes": [
+                "all"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "platforms": null,
+            "locations": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null,
+                "includeApplicationNames": [
+                    "All"
+                ]
+            },
+            "users": {
+                "includeGuestsOrExternalUsers": null,
+                "excludeGuestsOrExternalUsers": null,
+                "excludeGroupNames": [
+                    "CA-BreakGlassAccounts",
+                    "CA-Persona-Internals-IdentityProtection-Exclusions"
+                ],
+                "includeGroupNames": [
+                    "CA-Persona-Internals"
+                ]
+            }
+        },
+        "grantControls": {
+            "operator": "AND",
+            "builtInControls": [
+                "mfa",
+                "passwordChange"
+            ],
+            "customAuthenticationFactors": [],
+            "termsOfUse": [],
+            "authenticationStrength": null
+        },
+        "sessionControls": {
+            "disableResilienceDefaults": null,
+            "applicationEnforcedRestrictions": null,
+            "cloudAppSecurity": null,
+            "persistentBrowser": null,
+            "signInFrequency": {
+                "value": null,
+                "type": null,
+                "authenticationType": "primaryAndSecondaryAuthentication",
+                "frequencyInterval": "everyTime",
+                "isEnabled": true
+            }
+        }
+    },
+    {
+        "displayName": "CA203-Internals-IdentityProtection-AllApps-AnyPlatform-MFAforHighSignInRisk",
+        "state": "disabled",
+        "conditions": {
+            "userRiskLevels": [],
+            "signInRiskLevels": [
+                "high"
+            ],
+            "clientAppTypes": [
+                "all"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "locations": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null,
+                "includeApplicationNames": [
+                    "All"
+                ]
+            },
+            "users": {
+                "includeGuestsOrExternalUsers": null,
+                "excludeGuestsOrExternalUsers": null,
+                "excludeGroupNames": [
+                    "CA-BreakGlassAccounts",
+                    "CA-Persona-Internals-IdentityProtection-Exclusions"
+                ],
+                "includeGroupNames": [
+                    "CA-Persona-Internals"
+                ]
+            },
+            "platforms": {
+                "includePlatforms": [
+                    "all"
+                ],
+                "excludePlatforms": []
+            }
+        },
+        "grantControls": {
+            "operator": "OR",
+            "builtInControls": [
+                "mfa"
+            ],
+            "customAuthenticationFactors": [],
+            "termsOfUse": [],
+            "authenticationStrength": null
+        },
+        "sessionControls": {
+            "disableResilienceDefaults": null,
+            "applicationEnforcedRestrictions": null,
+            "cloudAppSecurity": null,
+            "persistentBrowser": null,
+            "signInFrequency": {
+                "value": null,
+                "type": null,
+                "authenticationType": "primaryAndSecondaryAuthentication",
+                "frequencyInterval": "everyTime",
+                "isEnabled": true
+            }
+        }
+    },
+    {
+        "displayName": "CA205-Internals-AppProtection-MicrosoftIntuneEnrollment-AnyPlatform-MFA",
+        "state": "disabled",
+        "conditions": {
+            "userRiskLevels": [],
+            "signInRiskLevels": [],
+            "clientAppTypes": [
+                "all"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "locations": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null,
+                "includeApplicationNames": [
+                    "Microsoft Intune Enrollment"
+                ]
+            },
+            "users": {
+                "includeGuestsOrExternalUsers": null,
+                "excludeGuestsOrExternalUsers": null,
+                "excludeGroupNames": [
+                    "CA-BreakGlassAccounts",
+                    "CA-Persona-Internals-AppProtection-Exclusions"
+                ],
+                "includeGroupNames": [
+                    "CA-Persona-Internals"
+                ]
+            },
+            "platforms": {
+                "includePlatforms": [
+                    "all"
+                ],
+                "excludePlatforms": []
+            }
+        },
+        "grantControls": {
+            "operator": "OR",
+            "builtInControls": [
+                "mfa"
+            ],
+            "customAuthenticationFactors": [],
+            "termsOfUse": [],
+            "authenticationStrength": null
+        },
+        "sessionControls": {
+            "disableResilienceDefaults": null,
+            "applicationEnforcedRestrictions": null,
+            "cloudAppSecurity": null,
+            "persistentBrowser": null,
+            "signInFrequency": {
+                "value": null,
+                "type": null,
+                "authenticationType": "primaryAndSecondaryAuthentication",
+                "frequencyInterval": "everyTime",
+                "isEnabled": true
+            }
+        }
+    },
+    {
+        "displayName": "CA206-Internals-DataandAppProtection-AllApps-iOSorAndroid-ClientAppORAPP",
+        "state": "disabled",
+        "sessionControls": null,
+        "conditions": {
+            "userRiskLevels": [],
+            "signInRiskLevels": [],
+            "clientAppTypes": [
+                "all"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "locations": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null,
+                "includeApplicationNames": [
+                    "Office365"
+                ]
+            },
+            "users": {
+                "includeGuestsOrExternalUsers": null,
+                "excludeGuestsOrExternalUsers": null,
+                "excludeGroupNames": [
+                    "CA-BreakGlassAccounts",
+                    "CA-Persona-Internals-AppProtection-Exclusions",
+                    "CA-Persona-Internals-DataProtection-Exclusions"
+                ],
+                "includeGroupNames": [
+                    "CA-Persona-Internals"
+                ]
+            },
+            "platforms": {
+                "includePlatforms": [
+                    "android",
+                    "iOS"
+                ],
+                "excludePlatforms": []
+            }
+        },
+        "grantControls": {
+            "operator": "OR",
+            "builtInControls": [
+                "approvedApplication",
+                "compliantApplication"
+            ],
+            "customAuthenticationFactors": [],
+            "termsOfUse": [],
+            "authenticationStrength": null
+        }
+    },
+    {
+        "displayName": "CA207-Internals-AttackSurfaceReduction-AllApps-AnyPlatform-BlockUnknownPlatforms",
+        "state": "disabled",
+        "sessionControls": null,
+        "conditions": {
+            "userRiskLevels": [],
+            "signInRiskLevels": [],
+            "clientAppTypes": [
+                "all"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "locations": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null,
+                "includeApplicationNames": [
+                    "All"
+                ]
+            },
+            "users": {
+                "includeGuestsOrExternalUsers": null,
+                "excludeGuestsOrExternalUsers": null,
+                "includeGroupNames": [
+                    "CA-Persona-Internals"
+                ]
+            },
+            "platforms": {
+                "includePlatforms": [
+                    "all"
+                ],
+                "excludePlatforms": [
+                    "android",
+                    "iOS",
+                    "windows",
+                    "macOS",
+                    "linux"
+                ]
+            }
+        },
+        "grantControls": {
+            "operator": "OR",
+            "builtInControls": [
+                "block"
+            ],
+            "customAuthenticationFactors": [],
+            "termsOfUse": [],
+            "authenticationStrength": null
+        }
+    },
+    {
+        "displayName": "CA300-Externals-BaseProtection-AllApps-AnyPlatform-CompliantorAADHJ",
+        "state": "disabled",
+        "sessionControls": null,
+        "conditions": {
+            "userRiskLevels": [],
+            "signInRiskLevels": [],
+            "clientAppTypes": [
+                "all"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "locations": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null,
+                "excludeApplicationNames": [
+                    "Microsoft Intune Enrollment"
+                ],
+                "includeApplicationNames": [
+                    "All"
+                ]
+            },
+            "users": {
+                "includeGuestsOrExternalUsers": null,
+                "excludeGuestsOrExternalUsers": null,
+                "excludeGroupNames": [
+                    "CA-BreakGlassAccounts",
+                    "CA-Persona-Externals-BaseProtection-Exclusions"
+                ],
+                "includeGroupNames": [
+                    "CA-Persona-Externals"
+                ]
+            },
+            "platforms": {
+                "includePlatforms": [
+                    "all"
+                ],
+                "excludePlatforms": []
+            }
+        },
+        "grantControls": {
+            "operator": "OR",
+            "builtInControls": [
+                "compliantDevice",
+                "domainJoinedDevice"
+            ],
+            "customAuthenticationFactors": [],
+            "termsOfUse": [],
+            "authenticationStrength": null
+        }
+    },
+    {
+        "displayName": "CA301-Externals-IdentityProtection-AllApps-AnyPlatform-CombinedRegistration",
+        "state": "disabled",
+        "sessionControls": null,
+        "conditions": {
+            "userRiskLevels": [],
+            "signInRiskLevels": [],
+            "clientAppTypes": [
+                "all"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "locations": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [
+                    "urn:user:registersecurityinfo"
+                ],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null
+            },
+            "users": {
+                "includeGuestsOrExternalUsers": null,
+                "excludeGuestsOrExternalUsers": null,
+                "excludeGroupNames": [
+                    "CA-BreakGlassAccounts",
+                    "CA-Persona-Externals-IdentityProtection-Exclusions"
+                ],
+                "includeGroupNames": [
+                    "CA-Persona-Externals"
+                ]
+            },
+            "platforms": {
+                "includePlatforms": [
+                    "all"
+                ],
+                "excludePlatforms": []
+            }
+        },
+        "grantControls": {
+            "operator": "OR",
+            "builtInControls": [
+                "compliantDevice",
+                "domainJoinedDevice"
+            ],
+            "customAuthenticationFactors": [],
+            "termsOfUse": [],
+            "authenticationStrength": null
+        }
+    },
+    {
+        "displayName": "CA302-Externals-IdentityProtection-AllApps-AnyPlatform-MFAandPWDforHighUserRisk",
+        "state": "disabled",
+        "conditions": {
+            "userRiskLevels": [
+                "high"
+            ],
+            "signInRiskLevels": [],
+            "clientAppTypes": [
+                "all"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "platforms": null,
+            "locations": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null,
+                "includeApplicationNames": [
+                    "All"
+                ]
+            },
+            "users": {
+                "includeGuestsOrExternalUsers": null,
+                "excludeGuestsOrExternalUsers": null,
+                "excludeGroupNames": [
+                    "CA-BreakGlassAccounts",
+                    "CA-Persona-Externals-IdentityProtection-Exclusions"
+                ],
+                "includeGroupNames": [
+                    "CA-Persona-Externals"
+                ]
+            }
+        },
+        "grantControls": {
+            "operator": "AND",
+            "builtInControls": [
+                "mfa",
+                "passwordChange"
+            ],
+            "customAuthenticationFactors": [],
+            "termsOfUse": [],
+            "authenticationStrength": null
+        },
+        "sessionControls": {
+            "disableResilienceDefaults": null,
+            "applicationEnforcedRestrictions": null,
+            "cloudAppSecurity": null,
+            "persistentBrowser": null,
+            "signInFrequency": {
+                "value": null,
+                "type": null,
+                "authenticationType": "primaryAndSecondaryAuthentication",
+                "frequencyInterval": "everyTime",
+                "isEnabled": true
+            }
+        }
+    },
+    {
+        "displayName": "CA303-Externals-IdentityProtection-AllApps-AnyPlatform-MFAforHighSignInRisk",
+        "state": "disabled",
+        "conditions": {
+            "userRiskLevels": [],
+            "signInRiskLevels": [
+                "high"
+            ],
+            "clientAppTypes": [
+                "all"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "locations": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null,
+                "includeApplicationNames": [
+                    "All"
+                ]
+            },
+            "users": {
+                "includeGuestsOrExternalUsers": null,
+                "excludeGuestsOrExternalUsers": null,
+                "excludeGroupNames": [
+                    "CA-BreakGlassAccounts",
+                    "CA-Persona-Externals-IdentityProtection-Exclusions"
+                ],
+                "includeGroupNames": [
+                    "CA-Persona-Externals"
+                ]
+            },
+            "platforms": {
+                "includePlatforms": [
+                    "all"
+                ],
+                "excludePlatforms": []
+            }
+        },
+        "grantControls": {
+            "operator": "OR",
+            "builtInControls": [
+                "mfa"
+            ],
+            "customAuthenticationFactors": [],
+            "termsOfUse": [],
+            "authenticationStrength": null
+        },
+        "sessionControls": {
+            "disableResilienceDefaults": null,
+            "applicationEnforcedRestrictions": null,
+            "cloudAppSecurity": null,
+            "persistentBrowser": null,
+            "signInFrequency": {
+                "value": null,
+                "type": null,
+                "authenticationType": "primaryAndSecondaryAuthentication",
+                "frequencyInterval": "everyTime",
+                "isEnabled": true
+            }
+        }
+    },
+    {
+        "displayName": "CA305-Externals-AppProtection-MicrosoftIntuneEnrollment-MFA",
+        "state": "disabled",
+        "conditions": {
+            "userRiskLevels": [],
+            "signInRiskLevels": [],
+            "clientAppTypes": [
+                "all"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "locations": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null,
+                "includeApplicationNames": [
+                    "Microsoft Intune Enrollment"
+                ]
+            },
+            "users": {
+                "includeGuestsOrExternalUsers": null,
+                "excludeGuestsOrExternalUsers": null,
+                "excludeGroupNames": [
+                    "CA-BreakGlassAccounts",
+                    "CA-Persona-Externals-AppProtection-Exclusions"
+                ],
+                "includeGroupNames": [
+                    "CA-Persona-Externals"
+                ]
+            },
+            "platforms": {
+                "includePlatforms": [
+                    "all"
+                ],
+                "excludePlatforms": []
+            }
+        },
+        "grantControls": {
+            "operator": "OR",
+            "builtInControls": [
+                "mfa"
+            ],
+            "customAuthenticationFactors": [],
+            "termsOfUse": [],
+            "authenticationStrength": null
+        },
+        "sessionControls": {
+            "disableResilienceDefaults": null,
+            "applicationEnforcedRestrictions": null,
+            "cloudAppSecurity": null,
+            "persistentBrowser": null,
+            "signInFrequency": {
+                "value": null,
+                "type": null,
+                "authenticationType": "primaryAndSecondaryAuthentication",
+                "frequencyInterval": "everyTime",
+                "isEnabled": true
+            }
+        }
+    },
+    {
+        "displayName": "CA306-Externals-DataandAppProtection-AllApps-iOSorAndroid-ClientAppORAPP",
+        "state": "disabled",
+        "sessionControls": null,
+        "conditions": {
+            "userRiskLevels": [],
+            "signInRiskLevels": [],
+            "clientAppTypes": [
+                "all"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "locations": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null,
+                "includeApplicationNames": [
+                    "Office365"
+                ]
+            },
+            "users": {
+                "includeGuestsOrExternalUsers": null,
+                "excludeGuestsOrExternalUsers": null,
+                "excludeGroupNames": [
+                    "CA-BreakGlassAccounts",
+                    "CA-Persona-Externals-AppProtection-Exclusions",
+                    "CA-Persona-Externals-DataProtection-Exclusions"
+                ],
+                "includeGroupNames": [
+                    "CA-Persona-Externals"
+                ]
+            },
+            "platforms": {
+                "includePlatforms": [
+                    "android",
+                    "iOS"
+                ],
+                "excludePlatforms": []
+            }
+        },
+        "grantControls": {
+            "operator": "OR",
+            "builtInControls": [
+                "approvedApplication",
+                "compliantApplication"
+            ],
+            "customAuthenticationFactors": [],
+            "termsOfUse": [],
+            "authenticationStrength": null
+        }
+    },
+    {
+        "displayName": "CA307-Externals-AttackSurfaceReduction-AllApps-AnyPlatform-BlockUnknownPlatforms",
+        "state": "disabled",
+        "sessionControls": null,
+        "conditions": {
+            "userRiskLevels": [],
+            "signInRiskLevels": [],
+            "clientAppTypes": [
+                "all"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "locations": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null,
+                "includeApplicationNames": [
+                    "All"
+                ]
+            },
+            "users": {
+                "includeGuestsOrExternalUsers": null,
+                "excludeGuestsOrExternalUsers": null,
+                "excludeGroupNames": [
+                    "CA-BreakGlassAccounts",
+                    "CA-Persona-Externals-AttackSurfaceReduction-Exclusions"
+                ],
+                "includeGroupNames": [
+                    "CA-Persona-Externals"
+                ]
+            },
+            "platforms": {
+                "includePlatforms": [
+                    "all"
+                ],
+                "excludePlatforms": [
+                    "android",
+                    "iOS",
+                    "windows",
+                    "macOS",
+                    "linux"
+                ]
+            }
+        },
+        "grantControls": {
+            "operator": "OR",
+            "builtInControls": [
+                "block"
+            ],
+            "customAuthenticationFactors": [],
+            "termsOfUse": [],
+            "authenticationStrength": null
+        }
+    },
+    {
+        "displayName": "CA402-Guests-IdentityProtection-AllApps-AnyPlatform-MFAforMediumandHighSignInRisk",
+        "state": "disabled",
+        "conditions": {
+            "userRiskLevels": [],
+            "signInRiskLevels": [
+                "high",
+                "medium"
+            ],
+            "clientAppTypes": [
+                "all"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "locations": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null,
+                "includeApplicationNames": [
+                    "All"
+                ]
+            },
+            "users": {
+                "excludeGuestsOrExternalUsers": null,
+                "includeGuestsOrExternalUsers": {
+                    "guestOrExternalUserTypes": "internalGuest,b2bCollaborationGuest,b2bCollaborationMember,b2bDirectConnectUser,otherExternalUser,serviceProvider",
+                    "externalTenants": {
+                        "@odata.type": "#microsoft.graph.conditionalAccessAllExternalTenants",
+                        "membershipKind": "all"
+                    }
+                },
+                "excludeGroupNames": [
+                    "CA-BreakGlassAccounts",
+                    "CA-Persona-Guests-IdentityProtection-Exclusions"
+                ]
+            },
+            "platforms": {
+                "includePlatforms": [
+                    "all"
+                ],
+                "excludePlatforms": []
+            }
+        },
+        "grantControls": {
+            "operator": "OR",
+            "builtInControls": [
+                "mfa"
+            ],
+            "customAuthenticationFactors": [],
+            "termsOfUse": [],
+            "authenticationStrength": null
+        },
+        "sessionControls": {
+            "disableResilienceDefaults": null,
+            "applicationEnforcedRestrictions": null,
+            "cloudAppSecurity": null,
+            "persistentBrowser": null,
+            "signInFrequency": {
+                "value": null,
+                "type": null,
+                "authenticationType": "primaryAndSecondaryAuthentication",
+                "frequencyInterval": "everyTime",
+                "isEnabled": true
+            }
+        }
+    },
+    {
+        "displayName": "CA404-Guests-AttackSurfaceReduction-AllApps-AnyPlatform-BlockNonGuestAppAccess",
+        "state": "disabled",
+        "conditions": {
+            "userRiskLevels": [],
+            "signInRiskLevels": [],
+            "clientAppTypes": [
+                "all"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "platforms": null,
+            "locations": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null,
+                "excludeApplicationNames": [
+                    "My Apps",
+                    "Office365"
+                ],
+                "includeApplicationNames": [
+                    "All"
+                ]
+            },
+            "users": {
+                "excludeGuestsOrExternalUsers": null,
+                "includeGuestsOrExternalUsers": {
+                    "guestOrExternalUserTypes": "internalGuest,b2bCollaborationGuest,b2bCollaborationMember,b2bDirectConnectUser,otherExternalUser,serviceProvider",
+                    "externalTenants": {
+                        "@odata.type": "#microsoft.graph.conditionalAccessAllExternalTenants",
+                        "membershipKind": "all"
+                    }
+                },
+                "excludeGroupNames": [
+                    "CA-BreakGlassAccounts",
+                    "CA-Persona-Guests-AttackSurfaceReduction-Exclusions"
+                ]
+            }
+        },
+        "grantControls": {
+            "operator": "OR",
+            "builtInControls": [
+                "block"
+            ],
+            "customAuthenticationFactors": [],
+            "termsOfUse": [],
+            "authenticationStrength": null
+        },
+        "sessionControls": {
+            "disableResilienceDefaults": null,
+            "applicationEnforcedRestrictions": null,
+            "signInFrequency": null,
+            "persistentBrowser": null,
+            "cloudAppSecurity": {
+                "cloudAppSecurityType": "monitorOnly",
+                "isEnabled": true
+            }
+        }
+    },
+    {
+        "displayName": "CA500-GuestAdmins-BaseProtection-AllApps-AnyPlatform-MFA",
+        "state": "disabled",
+        "sessionControls": null,
+        "conditions": {
+            "userRiskLevels": [],
+            "signInRiskLevels": [],
+            "clientAppTypes": [
+                "all"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "locations": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null,
+                "includeApplicationNames": [
+                    "All"
+                ]
+            },
+            "users": {
+                "includeGuestsOrExternalUsers": null,
+                "excludeGuestsOrExternalUsers": null,
+                "excludeGroupNames": [
+                    "CA-BreakGlassAccounts",
+                    "CA-Persona-GuestAdmins"
+                ],
+                "includeGroupNames": [
+                    "CA-Persona-GuestAdmins"
+                ]
+            },
+            "platforms": {
+                "includePlatforms": [
+                    "all"
+                ],
+                "excludePlatforms": []
+            }
+        },
+        "grantControls": {
+            "operator": "OR",
+            "builtInControls": [
+                "mfa"
+            ],
+            "customAuthenticationFactors": [],
+            "termsOfUse": [],
+            "authenticationStrength": null
+        }
+    },
+    {
+        "displayName": "CA502-GuestAdmins-IdentityProtection-AllApps-AnyPlatform-MFAforMediumandHighUserandSignInRisk",
+        "state": "disabled",
+        "conditions": {
+            "userRiskLevels": [],
+            "signInRiskLevels": [
+                "high",
+                "medium"
+            ],
+            "clientAppTypes": [
+                "all"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "platforms": null,
+            "locations": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null,
+                "includeApplicationNames": [
+                    "All"
+                ]
+            },
+            "users": {
+                "includeGuestsOrExternalUsers": null,
+                "excludeGuestsOrExternalUsers": null,
+                "excludeGroupNames": [
+                    "CA-Persona-GuestAdmins-IdentityProtection-Exclusions",
+                    "CA-BreakGlassAccounts"
+                ],
+                "includeGroupNames": [
+                    "CA-Persona-GuestAdmins"
+                ]
+            }
+        },
+        "grantControls": {
+            "operator": "OR",
+            "builtInControls": [
+                "mfa"
+            ],
+            "customAuthenticationFactors": [],
+            "termsOfUse": [],
+            "authenticationStrength": null
+        },
+        "sessionControls": {
+            "disableResilienceDefaults": null,
+            "applicationEnforcedRestrictions": null,
+            "cloudAppSecurity": null,
+            "persistentBrowser": null,
+            "signInFrequency": {
+                "value": null,
+                "type": null,
+                "authenticationType": "primaryAndSecondaryAuthentication",
+                "frequencyInterval": "everyTime",
+                "isEnabled": true
+            }
+        }
+    },
+    {
+        "displayName": "CA504-GuestAdmins-AttackSurfaceReduction-AllApps-AnyPlatform-BlockNonO365andAzureAccess",
+        "state": "disabled",
+        "grantControls": null,
+        "conditions": {
+            "userRiskLevels": [],
+            "signInRiskLevels": [],
+            "clientAppTypes": [
+                "all"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "locations": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null,
+                "excludeApplicationNames": [
+                    "Windows Azure Service Management API",
+                    "My Apps",
+                    "Office365"
+                ],
+                "includeApplicationNames": [
+                    "All"
+                ]
+            },
+            "users": {
+                "includeGuestsOrExternalUsers": null,
+                "excludeGuestsOrExternalUsers": null,
+                "includeGroupNames": [
+                    "CA-Persona-GuestAdmins"
+                ]
+            },
+            "platforms": {
+                "includePlatforms": [
+                    "all"
+                ],
+                "excludePlatforms": []
+            }
+        },
+        "sessionControls": {
+            "disableResilienceDefaults": null,
+            "applicationEnforcedRestrictions": null,
+            "signInFrequency": null,
+            "persistentBrowser": null,
+            "cloudAppSecurity": {
+                "cloudAppSecurityType": "mcasConfigured",
+                "isEnabled": true
+            }
+        }
+    },
+    {
+        "displayName": "CA600-Microsoft365ServiceAccounts-BaseProtection-AllApps-AnyPlatform-BlockUntrustedLocations",
+        "state": "disabled",
+        "sessionControls": null,
+        "conditions": {
+            "userRiskLevels": [],
+            "signInRiskLevels": [],
+            "clientAppTypes": [
+                "all"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "platforms": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null,
+                "includeApplicationNames": [
+                    "All"
+                ]
+            },
+            "users": {
+                "includeGuestsOrExternalUsers": null,
+                "excludeGuestsOrExternalUsers": null,
+                "excludeGroupNames": [
+                    "CA-BreakGlassAccounts"
+                ],
+                "includeGroupNames": [
+                    "CA-Persona-Microsoft365ServiceAccounts"
+                ]
+            },
+            "locations": {
+                "includeLocations": [
+                    "All"
+                ],
+                "excludeLocations": [
+                    "AllTrusted"
+                ]
+            }
+        },
+        "grantControls": {
+            "operator": "OR",
+            "builtInControls": [
+                "block"
+            ],
+            "customAuthenticationFactors": [],
+            "termsOfUse": [],
+            "authenticationStrength": null
+        }
+    },
+    {
+        "displayName": "CA601-Microsoft365ServiceAccounts-IdentityProtection-AllApps-AnyPlatform-BlockLegacyAuth",
+        "state": "disabled",
+        "sessionControls": null,
+        "conditions": {
+            "userRiskLevels": [],
+            "signInRiskLevels": [],
+            "clientAppTypes": [
+                "exchangeActiveSync",
+                "other"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "locations": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null,
+                "includeApplicationNames": [
+                    "All"
+                ]
+            },
+            "users": {
+                "includeGuestsOrExternalUsers": null,
+                "excludeGuestsOrExternalUsers": null,
+                "excludeGroupNames": [
+                    "CA-BreakGlassAccounts"
+                ],
+                "includeGroupNames": [
+                    "CA-Persona-Microsoft365ServiceAccounts"
+                ]
+            },
+            "platforms": {
+                "includePlatforms": [
+                    "all"
+                ],
+                "excludePlatforms": []
+            }
+        },
+        "grantControls": {
+            "operator": "OR",
+            "builtInControls": [
+                "block"
+            ],
+            "customAuthenticationFactors": [],
+            "termsOfUse": [],
+            "authenticationStrength": null
+        }
+    },
+    {
+        "displayName": "CA700-AzureServiceAccounts-BaseProtection-AllApps-AnyPlatform-BlockUntrustedLocations",
+        "state": "disabled",
+        "sessionControls": null,
+        "conditions": {
+            "userRiskLevels": [],
+            "signInRiskLevels": [],
+            "clientAppTypes": [
+                "all"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null,
+                "includeApplicationNames": [
+                    "All"
+                ]
+            },
+            "users": {
+                "includeGuestsOrExternalUsers": null,
+                "excludeGuestsOrExternalUsers": null,
+                "excludeGroupNames": [
+                    "CA-BreakGlassAccounts",
+                    "CA-Persona-AzureServiceAccounts-Exclusions"
+                ],
+                "includeGroupNames": [
+                    "CA-Persona-AzureServiceAccounts"
+                ]
+            },
+            "platforms": {
+                "includePlatforms": [
+                    "all"
+                ],
+                "excludePlatforms": []
+            },
+            "locations": {
+                "includeLocations": [
+                    "All"
+                ],
+                "excludeLocations": [
+                    "AllTrusted"
+                ]
+            }
+        },
+        "grantControls": {
+            "operator": "OR",
+            "builtInControls": [
+                "block"
+            ],
+            "customAuthenticationFactors": [],
+            "termsOfUse": [],
+            "authenticationStrength": null
+        }
+    },
+    {
+        "displayName": "CA702-AzureServiceAccounts-AttackSurfaceReduction-AllApps-AnyPlatform-BlockNonAzure",
+        "state": "disabled",
+        "sessionControls": null,
+        "conditions": {
+            "userRiskLevels": [],
+            "signInRiskLevels": [],
+            "clientAppTypes": [
+                "all"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "locations": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null,
+                "excludeApplicationNames": [
+                    "Windows Azure Service Management API"
+                ],
+                "includeApplicationNames": [
+                    "All"
+                ]
+            },
+            "users": {
+                "includeGuestsOrExternalUsers": null,
+                "excludeGuestsOrExternalUsers": null,
+                "excludeGroupNames": [
+                    "CA-BreakGlassAccounts",
+                    "CA-Persona-AzureServiceAccounts-Exclusions"
+                ],
+                "includeGroupNames": [
+                    "CA-Persona-AzureServiceAccounts"
+                ]
+            },
+            "platforms": {
+                "includePlatforms": [
+                    "all"
+                ],
+                "excludePlatforms": []
+            }
+        },
+        "grantControls": {
+            "operator": "OR",
+            "builtInControls": [
+                "block"
+            ],
+            "customAuthenticationFactors": [],
+            "termsOfUse": [],
+            "authenticationStrength": null
+        }
+    },
+    {
+        "displayName": "CA800-CorpServiceAccounts-BaseProtection-AllApps-AnyPlatform-BlockUntrustedLocations",
+        "state": "disabled",
+        "sessionControls": null,
+        "conditions": {
+            "userRiskLevels": [],
+            "signInRiskLevels": [],
+            "clientAppTypes": [
+                "all"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null,
+                "includeApplicationNames": [
+                    "All"
+                ]
+            },
+            "users": {
+                "includeGuestsOrExternalUsers": null,
+                "excludeGuestsOrExternalUsers": null,
+                "excludeGroupNames": [
+                    "CA-BreakGlassAccounts",
+                    "CA-Persona-CorpServiceAccounts-Exclusions"
+                ],
+                "includeGroupNames": [
+                    "CA-Persona-CorpServiceAccounts"
+                ]
+            },
+            "platforms": {
+                "includePlatforms": [
+                    "all"
+                ],
+                "excludePlatforms": []
+            },
+            "locations": {
+                "includeLocations": [
+                    "All"
+                ],
+                "excludeLocations": [
+                    "AllTrusted"
+                ]
+            }
+        },
+        "grantControls": {
+            "operator": "OR",
+            "builtInControls": [
+                "block"
+            ],
+            "customAuthenticationFactors": [],
+            "termsOfUse": [],
+            "authenticationStrength": null
+        }
+    },
+    {
+        "displayName": "CA802-CorpServiceAccounts-AttackSurfaceReduction-AllApps-AnyPlatform-BlockNonO365andAzure",
+        "state": "disabled",
+        "sessionControls": null,
+        "conditions": {
+            "userRiskLevels": [],
+            "signInRiskLevels": [],
+            "clientAppTypes": [
+                "all"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "locations": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null,
+                "excludeApplicationNames": [
+                    "Windows Azure Service Management API",
+                    "Office365"
+                ],
+                "includeApplicationNames": [
+                    "All"
+                ]
+            },
+            "users": {
+                "includeGuestsOrExternalUsers": null,
+                "excludeGuestsOrExternalUsers": null,
+                "excludeGroupNames": [
+                    "CA-BreakGlassAccounts",
+                    "CA-Persona-CorpServiceAccounts-Exclusions"
+                ],
+                "includeGroupNames": [
+                    "CA-Persona-CorpServiceAccounts"
+                ]
+            },
+            "platforms": {
+                "includePlatforms": [
+                    "all"
+                ],
+                "excludePlatforms": []
+            }
+        },
+        "grantControls": {
+            "operator": "OR",
+            "builtInControls": [
+                "block"
+            ],
+            "customAuthenticationFactors": [],
+            "termsOfUse": [],
+            "authenticationStrength": null
+        }
+    },
+    {
+        "displayName": "CA401-Guests-IdentityProtection-AllApps-AnyPlatform-TOU-CombinedRegistration",
+        "state": "disabled",
+        "sessionControls": null,
+        "conditions": {
+            "userRiskLevels": [],
+            "signInRiskLevels": [],
+            "clientAppTypes": [
+                "all"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "locations": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [
+                    "urn:user:registersecurityinfo"
+                ],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null
+            },
+            "users": {
+                "excludeGuestsOrExternalUsers": null,
+                "includeGuestsOrExternalUsers": {
+                    "guestOrExternalUserTypes": "internalGuest,b2bCollaborationGuest,b2bCollaborationMember,b2bDirectConnectUser,otherExternalUser,serviceProvider",
+                    "externalTenants": {
+                        "@odata.type": "#microsoft.graph.conditionalAccessAllExternalTenants",
+                        "membershipKind": "all"
+                    }
+                },
+                "excludeGroupNames": [
+                    "CA-BreakGlassAccounts",
+                    "CA-Persona-GuestAdmins-IdentityProtection-Exclusions"
+                ]
+            },
+            "platforms": {
+                "includePlatforms": [
+                    "all"
+                ],
+                "excludePlatforms": []
+            }
+        },
+        "grantControls": {
+            "operator": "OR",
+            "builtInControls": [
+                "mfa"
+            ],
+            "customAuthenticationFactors": [],
+            "termsOfUse": [],
+            "authenticationStrength": null
+        }
+    },
+    {
+        "displayName": "CA501-GuestAdmins-IdentityProtection-AllApps-AnyPlatform-CombinedRegistration",
+        "state": "disabled",
+        "sessionControls": null,
+        "conditions": {
+            "userRiskLevels": [],
+            "signInRiskLevels": [],
+            "clientAppTypes": [
+                "all"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "locations": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [
+                    "urn:user:registersecurityinfo"
+                ],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null
+            },
+            "users": {
+                "includeGuestsOrExternalUsers": null,
+                "excludeGuestsOrExternalUsers": null,
+                "excludeGroupNames": [
+                    "CA-BreakGlassAccounts",
+                    "CA-Persona-GuestAdmins-IdentityProtection-Exclusions"
+                ],
+                "includeGroupNames": [
+                    "CA-Persona-GuestAdmins"
+                ]
+            },
+            "platforms": {
+                "includePlatforms": [
+                    "all"
+                ],
+                "excludePlatforms": []
+            }
+        },
+        "grantControls": {
+            "operator": "OR",
+            "builtInControls": [
+                "mfa"
+            ],
+            "customAuthenticationFactors": [],
+            "termsOfUse": [],
+            "authenticationStrength": null
+        }
+    },
+    {
+        "displayName": "CA405-Guests-ComplianceProtection-AllApps-AnyPlatform-RequireTOU",
+        "state": "disabled",
+        "sessionControls": null,
+        "conditions": {
+            "userRiskLevels": [],
+            "signInRiskLevels": [],
+            "clientAppTypes": [
+                "all"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "platforms": null,
+            "locations": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null,
+                "includeApplicationNames": [
+                    "All"
+                ]
+            },
+            "users": {
+                "excludeGuestsOrExternalUsers": null,
+                "includeGuestsOrExternalUsers": {
+                    "guestOrExternalUserTypes": "internalGuest,b2bCollaborationGuest,b2bCollaborationMember,b2bDirectConnectUser,otherExternalUser,serviceProvider",
+                    "externalTenants": {
+                        "@odata.type": "#microsoft.graph.conditionalAccessAllExternalTenants",
+                        "membershipKind": "all"
+                    }
+                },
+                "excludeGroupNames": [
+                    "CA-Persona-Guests-Compliance-Exclusions",
+                    "CA-BreakGlassAccounts"
+                ]
+            }
+        },
+        "grantControls": {
+            "operator": "OR",
+            "builtInControls": [
+                "mfa"
+            ],
+            "customAuthenticationFactors": [],
+            "termsOfUse": [],
+            "authenticationStrength": null
+        }
+    },
+    {
+        "displayName": "CA505-GuestAdmins-ComplianceProtection-AnyPlatform-RequireTOU",
+        "state": "disabled",
+        "sessionControls": null,
+        "conditions": {
+            "userRiskLevels": [],
+            "signInRiskLevels": [],
+            "clientAppTypes": [
+                "all"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "platforms": null,
+            "locations": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null,
+                "includeApplicationNames": [
+                    "All"
+                ]
+            },
+            "users": {
+                "includeGuestsOrExternalUsers": null,
+                "excludeGuestsOrExternalUsers": null,
+                "excludeGroupNames": [
+                    "CA-BreakGlassAccounts",
+                    "CA-Persona-Guests-Compliance-Exclusions"
+                ],
+                "includeGroupNames": [
+                    "CA-Persona-GuestAdmins"
+                ]
+            }
+        },
+        "grantControls": {
+            "operator": "OR",
+            "builtInControls": [
+                "mfa"
+            ],
+            "customAuthenticationFactors": [],
+            "termsOfUse": [],
+            "authenticationStrength": null
+        }
+    },
+    {
+        "displayName": "CA900-WorkloadIdentities-BaseProtection-AllApps-AnyPlatform-BlockUntrustedLocations",
+        "state": "disabled",
+        "sessionControls": null,
+        "conditions": {
+            "userRiskLevels": [],
+            "signInRiskLevels": [],
+            "clientAppTypes": [
+                "all"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "platforms": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null,
+                "includeApplicationNames": [
+                    "All"
+                ]
+            },
+            "users": {
+                "includeGuestsOrExternalUsers": null,
+                "excludeGuestsOrExternalUsers": null,
+                "excludeGroupNames": [
+                    "CA-Persona-WorkloadIdentities-Exclusions",
+                    "CA-BreakGlassAccounts"
+                ],
+                "includeGroupNames": [
+                    "CA-Persona-WorkloadIdentities"
+                ]
+            },
+            "locations": {
+                "includeLocations": [
+                    "All"
+                ],
+                "excludeLocations": [
+                    "AllTrusted"
+                ]
+            }
+        },
+        "grantControls": {
+            "operator": "OR",
+            "builtInControls": [
+                "block"
+            ],
+            "customAuthenticationFactors": [],
+            "termsOfUse": [],
+            "authenticationStrength": null
+        }
+    },
+    {
+        "displayName": "CA1000-Developers-BaseProtection-AllApps-AnyPlatform-ForwardToDefenderforCloudApps",
+        "state": "disabled",
+        "grantControls": null,
+        "conditions": {
+            "userRiskLevels": [],
+            "signInRiskLevels": [],
+            "clientAppTypes": [
+                "all"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "platforms": null,
+            "locations": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null,
+                "excludeApplicationNames": [
+                    "Microsoft Intune Enrollment"
+                ],
+                "includeApplicationNames": [
+                    "All"
+                ]
+            },
+            "users": {
+                "includeGuestsOrExternalUsers": null,
+                "excludeGuestsOrExternalUsers": null,
+                "excludeGroupNames": [
+                    "CA-BreakGlassAccounts",
+                    "CA-Persona-Developers-BaseProtection-Exclusions"
+                ],
+                "includeGroupNames": [
+                    "CA-Persona-Developers"
+                ]
+            }
+        },
+        "sessionControls": {
+            "disableResilienceDefaults": null,
+            "applicationEnforcedRestrictions": null,
+            "signInFrequency": null,
+            "persistentBrowser": null,
+            "cloudAppSecurity": {
+                "cloudAppSecurityType": "mcasConfigured",
+                "isEnabled": true
+            }
+        }
+    },
+    {
+        "displayName": "CA1001-Developers-BaseProtection-AllApps-AnyPlatform-MFAfromUnamanagedDevices",
+        "state": "disabled",
+        "sessionControls": null,
+        "conditions": {
+            "userRiskLevels": [],
+            "signInRiskLevels": [],
+            "clientAppTypes": [
+                "all"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "platforms": null,
+            "locations": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null,
+                "includeApplicationNames": [
+                    "All"
+                ]
+            },
+            "users": {
+                "includeGuestsOrExternalUsers": null,
+                "excludeGuestsOrExternalUsers": null,
+                "excludeGroupNames": [
+                    "CA-BreakGlassAccounts",
+                    "CA-Persona-Developers-BaseProtection-Exclusions"
+                ],
+                "includeGroupNames": [
+                    "CA-Persona-Developers"
+                ]
+            }
+        },
+        "grantControls": {
+            "operator": "OR",
+            "builtInControls": [
+                "mfa"
+            ],
+            "customAuthenticationFactors": [],
+            "termsOfUse": [],
+            "authenticationStrength": null
+        }
+    },
+    {
+        "displayName": "CA1002-Developers-IdentityProtection-AllApps-AnyPlatform-CombinedRegistration",
+        "state": "disabled",
+        "sessionControls": null,
+        "conditions": {
+            "userRiskLevels": [],
+            "signInRiskLevels": [],
+            "clientAppTypes": [
+                "all"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "platforms": null,
+            "locations": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [
+                    "urn:user:registersecurityinfo"
+                ],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null
+            },
+            "users": {
+                "includeGuestsOrExternalUsers": null,
+                "excludeGuestsOrExternalUsers": null,
+                "excludeGroupNames": [
+                    "CA-BreakGlassAccounts",
+                    "CA-Persona-Developers-IdentityProtection-Exclusions"
+                ],
+                "includeGroupNames": [
+                    "CA-Persona-Developers"
+                ]
+            }
+        },
+        "grantControls": {
+            "operator": "OR",
+            "builtInControls": [
+                "compliantDevice",
+                "domainJoinedDevice"
+            ],
+            "customAuthenticationFactors": [],
+            "termsOfUse": [],
+            "authenticationStrength": null
+        }
+    },
+    {
+        "displayName": "CA1003-Developers-IdentityProtection-AllApps-AnyPlatform-MFAandPWDforHighUserRisk",
+        "state": "disabled",
+        "conditions": {
+            "userRiskLevels": [
+                "high",
+                "medium"
+            ],
+            "signInRiskLevels": [],
+            "clientAppTypes": [
+                "all"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "platforms": null,
+            "locations": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null,
+                "includeApplicationNames": [
+                    "All"
+                ]
+            },
+            "users": {
+                "includeGuestsOrExternalUsers": null,
+                "excludeGuestsOrExternalUsers": null,
+                "excludeGroupNames": [
+                    "CA-BreakGlassAccounts",
+                    "CA-Persona-Developers-IdentityProtection-Exclusions"
+                ],
+                "includeGroupNames": [
+                    "CA-Persona-Developers"
+                ]
+            }
+        },
+        "grantControls": {
+            "operator": "AND",
+            "builtInControls": [
+                "mfa",
+                "passwordChange"
+            ],
+            "customAuthenticationFactors": [],
+            "termsOfUse": [],
+            "authenticationStrength": null
+        },
+        "sessionControls": {
+            "disableResilienceDefaults": null,
+            "applicationEnforcedRestrictions": null,
+            "cloudAppSecurity": null,
+            "persistentBrowser": null,
+            "signInFrequency": {
+                "value": null,
+                "type": null,
+                "authenticationType": "primaryAndSecondaryAuthentication",
+                "frequencyInterval": "everyTime",
+                "isEnabled": true
+            }
+        }
+    },
+    {
+        "displayName": "CA1004-Developers-IdentityProtection-AllApps-AnyPlatform-MFAforHighSignInRisk",
+        "state": "disabled",
+        "conditions": {
+            "userRiskLevels": [],
+            "signInRiskLevels": [
+                "high",
+                "medium"
+            ],
+            "clientAppTypes": [
+                "all"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "platforms": null,
+            "locations": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null,
+                "includeApplicationNames": [
+                    "All"
+                ]
+            },
+            "users": {
+                "includeGuestsOrExternalUsers": null,
+                "excludeGuestsOrExternalUsers": null,
+                "excludeGroupNames": [
+                    "CA-BreakGlassAccounts",
+                    "CA-Persona-Developers-IdentityProtection-Exclusions"
+                ],
+                "includeGroupNames": [
+                    "CA-Persona-Developers"
+                ]
+            }
+        },
+        "grantControls": {
+            "operator": "OR",
+            "builtInControls": [
+                "mfa"
+            ],
+            "customAuthenticationFactors": [],
+            "termsOfUse": [],
+            "authenticationStrength": null
+        },
+        "sessionControls": {
+            "disableResilienceDefaults": null,
+            "applicationEnforcedRestrictions": null,
+            "cloudAppSecurity": null,
+            "persistentBrowser": null,
+            "signInFrequency": {
+                "value": null,
+                "type": null,
+                "authenticationType": "primaryAndSecondaryAuthentication",
+                "frequencyInterval": "everyTime",
+                "isEnabled": true
+            }
+        }
+    },
+    {
+        "displayName": "CA1006-Developers-AppProtection-MicrosoftIntuneEnrollment-AnyPlatform-MFA",
+        "state": "disabled",
+        "conditions": {
+            "userRiskLevels": [],
+            "signInRiskLevels": [],
+            "clientAppTypes": [
+                "all"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "platforms": null,
+            "locations": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null,
+                "includeApplicationNames": [
+                    "Microsoft Intune Enrollment"
+                ]
+            },
+            "users": {
+                "includeGuestsOrExternalUsers": null,
+                "excludeGuestsOrExternalUsers": null,
+                "excludeGroupNames": [
+                    "CA-BreakGlassAccounts",
+                    "CA-Persona-Developers-AppProtection-Exclusions"
+                ],
+                "includeGroupNames": [
+                    "CA-Persona-Developers"
+                ]
+            }
+        },
+        "grantControls": {
+            "operator": "OR",
+            "builtInControls": [
+                "mfa"
+            ],
+            "customAuthenticationFactors": [],
+            "termsOfUse": [],
+            "authenticationStrength": null
+        },
+        "sessionControls": {
+            "disableResilienceDefaults": null,
+            "applicationEnforcedRestrictions": null,
+            "cloudAppSecurity": null,
+            "persistentBrowser": null,
+            "signInFrequency": {
+                "value": null,
+                "type": null,
+                "authenticationType": "primaryAndSecondaryAuthentication",
+                "frequencyInterval": "everyTime",
+                "isEnabled": true
+            }
+        }
+    },
+    {
+        "displayName": "CA1007-Developers-DataandAppProtection-AllApps-iOSorAndroid-ClientAppORAPP",
+        "state": "disabled",
+        "sessionControls": null,
+        "conditions": {
+            "userRiskLevels": [],
+            "signInRiskLevels": [],
+            "clientAppTypes": [
+                "all"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "locations": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null,
+                "excludeApplicationNames": [
+                    "Microsoft Intune Enrollment"
+                ],
+                "includeApplicationNames": [
+                    "Office365"
+                ]
+            },
+            "users": {
+                "includeGuestsOrExternalUsers": null,
+                "excludeGuestsOrExternalUsers": null,
+                "excludeGroupNames": [
+                    "CA-BreakGlassAccounts",
+                    "CA-Persona-Developers-AppProtection-Exclusions",
+                    "CA-Persona-Developers-DataProtection-Exclusions"
+                ],
+                "includeGroupNames": [
+                    "CA-Persona-Developers"
+                ]
+            },
+            "platforms": {
+                "includePlatforms": [
+                    "android",
+                    "iOS"
+                ],
+                "excludePlatforms": []
+            }
+        },
+        "grantControls": {
+            "operator": "OR",
+            "builtInControls": [
+                "approvedApplication",
+                "compliantApplication"
+            ],
+            "customAuthenticationFactors": [],
+            "termsOfUse": [],
+            "authenticationStrength": null
+        }
+    },
+    {
+        "displayName": "CA1008-Developers-AttackSurfaceReduction-AllApps-AnyPlatform-BlockUnknownPlatforms",
+        "state": "disabled",
+        "sessionControls": null,
+        "conditions": {
+            "userRiskLevels": [],
+            "signInRiskLevels": [],
+            "clientAppTypes": [
+                "all"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "locations": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null,
+                "includeApplicationNames": [
+                    "All"
+                ]
+            },
+            "users": {
+                "includeGuestsOrExternalUsers": null,
+                "excludeGuestsOrExternalUsers": null,
+                "excludeGroupNames": [
+                    "CA-BreakGlassAccounts",
+                    "CA-Persona-Developers-AttackSurfaceReduction-Exclusions"
+                ],
+                "includeGroupNames": [
+                    "CA-Persona-Developers"
+                ]
+            },
+            "platforms": {
+                "includePlatforms": [
+                    "all"
+                ],
+                "excludePlatforms": [
+                    "android",
+                    "iOS",
+                    "windows",
+                    "macOS",
+                    "linux"
+                ]
+            }
+        },
+        "grantControls": {
+            "operator": "OR",
+            "builtInControls": [
+                "block"
+            ],
+            "customAuthenticationFactors": [],
+            "termsOfUse": [],
+            "authenticationStrength": null
+        }
+    },
+    {
+        "displayName": "CA400-Guests-BaseProtection-AllApps-AnyPlatform-MFA",
+        "state": "disabled",
+        "sessionControls": null,
+        "conditions": {
+            "userRiskLevels": [],
+            "signInRiskLevels": [],
+            "clientAppTypes": [
+                "all"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "platforms": null,
+            "locations": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null,
+                "includeApplicationNames": [
+                    "All"
+                ]
+            },
+            "users": {
+                "excludeGuestsOrExternalUsers": null,
+                "includeGuestsOrExternalUsers": {
+                    "guestOrExternalUserTypes": "internalGuest,b2bCollaborationGuest,b2bCollaborationMember,b2bDirectConnectUser,otherExternalUser,serviceProvider",
+                    "externalTenants": {
+                        "@odata.type": "#microsoft.graph.conditionalAccessAllExternalTenants",
+                        "membershipKind": "all"
+                    }
+                }
+            }
+        },
+        "grantControls": {
+            "operator": "OR",
+            "builtInControls": [
+                "mfa"
+            ],
+            "customAuthenticationFactors": [],
+            "termsOfUse": [],
+            "authenticationStrength": null
+        }
+    },
+    {
+        "displayName": "CA602-Microsoft365ServiceAccounts-AttackSurfaceReduction-O365-AnyPlatform-BlockNonO365",
+        "state": "disabled",
+        "sessionControls": null,
+        "conditions": {
+            "userRiskLevels": [],
+            "signInRiskLevels": [],
+            "clientAppTypes": [
+                "all"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "platforms": null,
+            "locations": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null,
+                "excludeApplicationNames": [
+                    "Office365"
+                ],
+                "includeApplicationNames": [
+                    "All"
+                ]
+            },
+            "users": {
+                "includeGuestsOrExternalUsers": null,
+                "excludeGuestsOrExternalUsers": null,
+                "excludeGroupNames": [
+                    "CA-BreakGlassAccounts"
+                ],
+                "includeGroupNames": [
+                    "CA-Persona-Microsoft365ServiceAccounts"
+                ]
+            }
+        },
+        "grantControls": {
+            "operator": "OR",
+            "builtInControls": [
+                "block"
+            ],
+            "customAuthenticationFactors": [],
+            "termsOfUse": [],
+            "authenticationStrength": null
+        }
+    },
+    {
+        "displayName": "CA801-CorpServiceAccounts-IdentityProtection-AllApps-AnyPlatform-BlockLegacyAuth",
+        "state": "disabled",
+        "sessionControls": null,
+        "conditions": {
+            "userRiskLevels": [],
+            "signInRiskLevels": [],
+            "clientAppTypes": [
+                "exchangeActiveSync",
+                "other"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "platforms": null,
+            "locations": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null,
+                "includeApplicationNames": [
+                    "All"
+                ]
+            },
+            "users": {
+                "includeGuestsOrExternalUsers": null,
+                "excludeGuestsOrExternalUsers": null,
+                "excludeGroupNames": [
+                    "CA-Persona-CorpServiceAccounts-Exclusions",
+                    "CA-BreakGlassAccounts"
+                ],
+                "includeGroupNames": [
+                    "CA-Persona-CorpServiceAccounts"
+                ]
+            }
+        },
+        "grantControls": {
+            "operator": "OR",
+            "builtInControls": [
+                "block"
+            ],
+            "customAuthenticationFactors": [],
+            "termsOfUse": [],
+            "authenticationStrength": null
+        }
+    },
+    {
+        "displayName": "CA701-AzureServiceAccounts-IdentityProtection-AllApps-AnyPlatform-BlockLegacyAuth",
+        "state": "disabled",
+        "sessionControls": null,
+        "conditions": {
+            "userRiskLevels": [],
+            "signInRiskLevels": [],
+            "clientAppTypes": [
+                "exchangeActiveSync",
+                "other"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "locations": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null,
+                "includeApplicationNames": [
+                    "All"
+                ]
+            },
+            "users": {
+                "includeGuestsOrExternalUsers": null,
+                "excludeGuestsOrExternalUsers": null,
+                "excludeGroupNames": [
+                    "CA-BreakGlassAccounts",
+                    "CA-Persona-AzureServiceAccounts-Exclusions"
+                ],
+                "includeGroupNames": [
+                    "CA-Persona-AzureServiceAccounts"
+                ]
+            },
+            "platforms": {
+                "includePlatforms": [
+                    "all"
+                ],
+                "excludePlatforms": []
+            }
+        },
+        "grantControls": {
+            "operator": "OR",
+            "builtInControls": [
+                "block"
+            ],
+            "customAuthenticationFactors": [],
+            "termsOfUse": [],
+            "authenticationStrength": null
+        }
+    },
+    {
+        "displayName": "CA104-Admins-IdentityProtection-AllApps-AnyPlatform-BlockLegacyAuth",
+        "state": "disabled",
+        "sessionControls": null,
+        "conditions": {
+            "userRiskLevels": [],
+            "signInRiskLevels": [],
+            "clientAppTypes": [
+                "exchangeActiveSync",
+                "other"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "locations": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null,
+                "includeApplicationNames": [
+                    "All"
+                ]
+            },
+            "users": {
+                "includeGuestsOrExternalUsers": null,
+                "excludeGuestsOrExternalUsers": null,
+                "excludeGroupNames": [
+                    "CA-BreakGlassAccounts",
+                    "CA-Persona-Admins-IdentityProtection-Exclusions"
+                ],
+                "includeGroupNames": [
+                    "CA-Persona-Admins"
+                ]
+            },
+            "platforms": {
+                "includePlatforms": [
+                    "all"
+                ],
+                "excludePlatforms": []
+            }
+        },
+        "grantControls": {
+            "operator": "OR",
+            "builtInControls": [
+                "block"
+            ],
+            "customAuthenticationFactors": [],
+            "termsOfUse": [],
+            "authenticationStrength": null
+        }
+    },
+    {
+        "displayName": "CA204-Internals-IdentityProtection-AllApps-AnyPlatform-BlockLegacyAuth",
+        "state": "disabled",
+        "sessionControls": null,
+        "conditions": {
+            "userRiskLevels": [],
+            "signInRiskLevels": [],
+            "clientAppTypes": [
+                "exchangeActiveSync",
+                "other"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "locations": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null,
+                "includeApplicationNames": [
+                    "All"
+                ]
+            },
+            "users": {
+                "includeGuestsOrExternalUsers": null,
+                "excludeGuestsOrExternalUsers": null,
+                "excludeGroupNames": [
+                    "CA-BreakGlassAccounts",
+                    "CA-Persona-Internals-IdentityProtection-Exclusions"
+                ],
+                "includeGroupNames": [
+                    "CA-Persona-Internals"
+                ]
+            },
+            "platforms": {
+                "includePlatforms": [
+                    "all"
+                ],
+                "excludePlatforms": []
+            }
+        },
+        "grantControls": {
+            "operator": "OR",
+            "builtInControls": [
+                "block"
+            ],
+            "customAuthenticationFactors": [],
+            "termsOfUse": [],
+            "authenticationStrength": null
+        }
+    },
+    {
+        "displayName": "CA304-Externals-IdentityProtection-AllApps-AnyPlatform-BlockLegacyAuth",
+        "state": "disabled",
+        "sessionControls": null,
+        "conditions": {
+            "userRiskLevels": [],
+            "signInRiskLevels": [],
+            "clientAppTypes": [
+                "exchangeActiveSync",
+                "other"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "locations": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null,
+                "includeApplicationNames": [
+                    "All"
+                ]
+            },
+            "users": {
+                "includeGuestsOrExternalUsers": null,
+                "excludeGuestsOrExternalUsers": null,
+                "excludeGroupNames": [
+                    "CA-BreakGlassAccounts",
+                    "CA-Persona-Externals-IdentityProtection-Exclusions"
+                ],
+                "includeGroupNames": [
+                    "CA-Persona-Externals"
+                ]
+            },
+            "platforms": {
+                "includePlatforms": [
+                    "all"
+                ],
+                "excludePlatforms": []
+            }
+        },
+        "grantControls": {
+            "operator": "OR",
+            "builtInControls": [
+                "block"
+            ],
+            "customAuthenticationFactors": [],
+            "termsOfUse": [],
+            "authenticationStrength": null
+        }
+    },
+    {
+        "displayName": "CA403-Guests-IdentityProtection-AllApps-AnyPlatform-BlockLegacyAuth",
+        "state": "disabled",
+        "sessionControls": null,
+        "conditions": {
+            "userRiskLevels": [],
+            "signInRiskLevels": [],
+            "clientAppTypes": [
+                "exchangeActiveSync",
+                "other"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "locations": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null,
+                "includeApplicationNames": [
+                    "All"
+                ]
+            },
+            "users": {
+                "excludeGuestsOrExternalUsers": null,
+                "includeGuestsOrExternalUsers": {
+                    "guestOrExternalUserTypes": "internalGuest,b2bCollaborationGuest,b2bCollaborationMember,b2bDirectConnectUser,otherExternalUser,serviceProvider",
+                    "externalTenants": {
+                        "@odata.type": "#microsoft.graph.conditionalAccessAllExternalTenants",
+                        "membershipKind": "all"
+                    }
+                },
+                "excludeGroupNames": [
+                    "CA-BreakGlassAccounts",
+                    "CA-Persona-Guests-IdentityProtection-Exclusions"
+                ]
+            },
+            "platforms": {
+                "includePlatforms": [
+                    "all"
+                ],
+                "excludePlatforms": []
+            }
+        },
+        "grantControls": {
+            "operator": "OR",
+            "builtInControls": [
+                "block"
+            ],
+            "customAuthenticationFactors": [],
+            "termsOfUse": [],
+            "authenticationStrength": null
+        }
+    },
+    {
+        "displayName": "CA503-GuestAdmins-IdentityProtection-AllApps-AnyPlatform-BlockLegacyAuth",
+        "state": "disabled",
+        "sessionControls": null,
+        "conditions": {
+            "userRiskLevels": [],
+            "signInRiskLevels": [],
+            "clientAppTypes": [
+                "exchangeActiveSync",
+                "other"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "locations": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null,
+                "includeApplicationNames": [
+                    "All"
+                ]
+            },
+            "users": {
+                "includeGuestsOrExternalUsers": null,
+                "excludeGuestsOrExternalUsers": null,
+                "excludeGroupNames": [
+                    "CA-BreakGlassAccounts",
+                    "CA-Persona-GuestAdmins-IdentityProtection-Exclusions"
+                ],
+                "includeGroupNames": [
+                    "CA-Persona-GuestAdmins"
+                ]
+            },
+            "platforms": {
+                "includePlatforms": [
+                    "all"
+                ],
+                "excludePlatforms": []
+            }
+        },
+        "grantControls": {
+            "operator": "OR",
+            "builtInControls": [
+                "block"
+            ],
+            "customAuthenticationFactors": [],
+            "termsOfUse": [],
+            "authenticationStrength": null
+        }
+    },
+    {
+        "displayName": "CA1005-Developers-IdentityProtection-AllApps-AnyPlatform-BlockLegacyAuth",
+        "state": "disabled",
+        "sessionControls": null,
+        "conditions": {
+            "userRiskLevels": [],
+            "signInRiskLevels": [],
+            "clientAppTypes": [
+                "exchangeActiveSync",
+                "other"
+            ],
+            "servicePrincipalRiskLevels": [],
+            "locations": null,
+            "devices": null,
+            "clientApplications": null,
+            "applications": {
+                "includeUserActions": [],
+                "includeAuthenticationContextClassReferences": [],
+                "applicationFilter": null,
+                "includeApplicationNames": [
+                    "All"
+                ]
+            },
+            "users": {
+                "includeGuestsOrExternalUsers": null,
+                "excludeGuestsOrExternalUsers": null,
+                "excludeGroupNames": [
+                    "CA-BreakGlassAccounts",
+                    "CA-Persona-Developers-IdentityProtection-Exclusions"
+                ],
+                "includeGroupNames": [
+                    "CA-Persona-Developers"
+                ]
+            },
+            "platforms": {
+                "includePlatforms": [
+                    "all"
+                ],
+                "excludePlatforms": []
+            }
+        },
+        "grantControls": {
+            "operator": "OR",
+            "builtInControls": [
+                "block"
+            ],
+            "customAuthenticationFactors": [],
+            "termsOfUse": [],
+            "authenticationStrength": null
+        }
+    }
+]
